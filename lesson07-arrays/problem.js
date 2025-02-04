@@ -4,5 +4,10 @@
 // // removeDuplicates([1, 1, 1, 1, 1, 1]); // => [1]
 // // removeDuplicates([1, 2, 3, 4, 5]); // => [1, 2, 3, 4, 5]
 module.exports = function removeDuplicates(arr) {
-  // your code here
+  //using a Set, which automatically removes duplicate values
+  // NOTES: Set is a built-in JavaScript object that only stores unique values;
+  // NOTES: passing arr into new Set(), automatically removes duplicates;
+  // NOTES: spread operator (...) converts the Set back into an array, ensuring that our function returns an array.
+
+  return [...new Set(arr)];
 };
